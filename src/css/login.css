@@ -1,0 +1,38 @@
+.user_pass {
+    -fx-accent: #0063A2;
+	-fx-background-color: #b9b9b9, white;
+    -fx-background-insets:  0, 0 0 1 0;
+    -fx-background-radius: 0;
+}
+
+.user_pass:focused {
+	-fx-background-color: #0063A2, white;
+}
+
+.btn_close_minus {
+    -fx-background-color: transparent;
+}
+
+.btn_close_minus:hover {
+    -fx-background-color: #96D6FF;
+}
+
+.btn_sign_in {
+    -fx-background-color: #62C2FF;
+    -fx-text-fill: white;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+}
+
+.btn_sign_in:hover {
+    -fx-text-fill: white;
+    -fx-background-color: #0165A3;
+}
+
+.main_login {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+
+

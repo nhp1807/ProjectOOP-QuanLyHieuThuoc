@@ -1,0 +1,60 @@
+/* dashboard, contact, other */
+.dashboard_btn_left {
+    -fx-background-color:  #29B6F6;
+}
+
+.dashboard_btn_left:hover {
+    -fx-background-color: #62C2FF;
+}
+
+.dashboard_btn_left:pressed {
+    -fx-background-color:  #62C2FF;
+}
+
+.dashboard_btn_left:focused {
+    -fx-background-color:  #62C2FF;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 0px 0px 0px 5px;
+}
+
+/* minus, close button */
+.minus_close {
+    -fx-background-color: #29B6F6;
+}
+
+.minus_close:hover {
+    -fx-background-color: #62C2FF;
+}
+
+.minus_close:pressed {
+    -fx-background-color: #62C2FF;
+}
+
+/* anchorpane in home*/
+.anchor_home {
+    -fx-background-color:  #62C2FF;
+    -fx-background-radius: 30;
+    -fx-border-radius:30;
+}
+
+/* table view in store */
+.table-view .column-header,
+.table-view .column-header.background .filler {
+    -fx-cell-size: 20;
+    -fx-background-color: #96D6FF;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #0165A3;
+    -fx-alignment: CENTER;
+}
+
+
+/* add, delete, update */
+.store_btn {
+    -fx-background-color: #29B6F6;
+}
+
+.store_btn:hover {
+    -fx-background-color: #014D8B;
+}

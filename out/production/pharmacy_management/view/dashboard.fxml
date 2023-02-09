@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashboard_form" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.dashboard_controller">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="1000.0" style="-fx-background-color: #29B6F6;" stylesheets="@../css/dashboard.css">
+               <children>
+                  <Button fx:id="close_btn" layoutX="970.0" layoutY="5.0" mnemonicParsing="false" onAction="#close_form" styleClass="minus_close" stylesheets="@../css/dashboard.css">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" size="1.2em" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="minus_btn" layoutX="940.0" layoutY="5.0" mnemonicParsing="false" onAction="#minus_form" styleClass="minus_close" stylesheets="@../css/dashboard.css">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="MINUS" size="1.2em" />
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <VBox prefHeight="700.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/dashboard_left.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="200.0" style="-fx-background-color: #29B6F6;">
+                     <children>
+                        <AnchorPane prefHeight="80.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="45.0" layoutY="6.0" text="PHARMACY " textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat ExtraBold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="15.0" layoutY="35.0" text="MANAGEMENT SYSTEM" textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat SemiBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="100.0" layoutX="84.0" layoutY="5.0" startX="-70.0" stroke="WHITE" strokeWidth="2.5" />
+                              <Line endX="100.0" layoutX="84.0" layoutY="60.0" startX="-70.0" stroke="WHITE" strokeWidth="2.5" />
+                              <Label layoutX="14.0" layoutY="66.0" text="Dashboard" textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane>
+                           <children>
+                              <Button fx:id="home_btn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="45.0" prefWidth="200.0" styleClass="dashboard_btn_left" stylesheets="@../css/dashboard.css" text="HOME" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="HOME" size="2em" text="" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Montserrat SemiBold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding>
+                              </Button>
+                              <Button fx:id="store_btn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="42.399993896484375" mnemonicParsing="false" onAction="#switchForm" prefHeight="45.0" prefWidth="200.0" styleClass="dashboard_btn_left" stylesheets="@../css/dashboard.css" text="STORE" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="HOSPITAL_ALT" size="2em" text="" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Montserrat SemiBold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding>
+                              </Button>
+                              <Button fx:id="purchase_btn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="84.80000305175781" mnemonicParsing="false" onAction="#switchForm" prefHeight="45.0" prefWidth="200.0" styleClass="dashboard_btn_left" stylesheets="@../css/dashboard.css" text="PURCHASE" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="CART_PLUS" size="2em" text="" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Montserrat SemiBold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding>
+                              </Button>
+                              <Button fx:id="statistic_btn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="127.19999694824219" mnemonicParsing="false" onAction="#switchForm" prefHeight="45.0" prefWidth="200.0" styleClass="dashboard_btn_left" stylesheets="@../css/dashboard.css" text="STATISTIC" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="LINE_CHART" size="2em" text="" wrappingWidth="24.22859001159668" />
+                                 </graphic>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Montserrat SemiBold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="about_btn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutY="169.59999084472656" mnemonicParsing="false" onAction="#switchForm" prefHeight="45.0" prefWidth="200.0" styleClass="dashboard_btn_left" stylesheets="@../css/dashboard.css" text="ABOUT" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="SLIDESHARE" size="2em" text="" />
+                                 </graphic>
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Montserrat SemiBold" size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #29B6F6;">
+                     <children>
+                        <Label text="Contact " textFill="WHITE">
+                           <VBox.margin>
+                              <Insets left="15.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Montserrat Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="facebook_btn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#facebookBrowser" prefHeight="45.0" prefWidth="200.0" styleClass="dashboard_btn_left" stylesheets="@../css/dashboard.css" text="FACEBOOK" textFill="WHITE">
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                           <font>
+                              <Font name="Montserrat SemiBold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="FACEBOOK_ALTFFICIAL" size="2em" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="email_btn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="28.0" mnemonicParsing="false" onAction="#emailBrowser" prefHeight="45.0" prefWidth="200.0" styleClass="dashboard_btn_left" stylesheets="@../css/dashboard.css" text="WEB" textFill="WHITE">
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                           <font>
+                              <Font name="Montserrat SemiBold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="ENVELOPE" size="2em" text="" />
+                           </graphic>
+                        </Button>
+                        <Line endX="100.0" startX="-70.0" stroke="WHITE" strokeWidth="2.5">
+                           <VBox.margin>
+                              <Insets left="15.0" top="10.0" />
+                           </VBox.margin>
+                        </Line>
+                        <Label layoutX="25.0" layoutY="10.0" text="Other" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="15.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Button fx:id="signout_btn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="73.0" mnemonicParsing="false" onAction="#signout" prefHeight="45.0" prefWidth="200.0" styleClass="dashboard_btn_left" stylesheets="@../css/dashboard.css" text="SIGN OUT" textFill="WHITE">
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                           <font>
+                              <Font name="Montserrat SemiBold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="2em" text="" />
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children></VBox>
+            <AnchorPane fx:id="main_form" layoutX="200.0" layoutY="40.0" prefHeight="660.0" prefWidth="1000.0">
+               <children>
+                  <AnchorPane fx:id="home_form" prefHeight="660.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="260.0" prefWidth="1000.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #62C2FF; -fx-border-width: 0px 0px 3px 0px;">
+                           <children>
+                              <AnchorPane layoutX="25.0" layoutY="30.0" prefHeight="200.0" prefWidth="300.0" styleClass="anchor_home" stylesheets="@../css/dashboard.css">
+                                 <children>
+                                    <Label layoutX="45.0" layoutY="150.0" text="TỔNG SỐ LOẠI THUỐC" textFill="WHITE">
+                                       <font>
+                                          <Font name="Montserrat Black" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="home_loaithuoc_txt" layoutX="250.0" layoutY="30.0" text="0" textFill="WHITE">
+                                       <font>
+                                          <Font name="Montserrat Black" size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <FontAwesomeIcon fill="WHITE" layoutX="30.0" layoutY="120.0" size="5em" />
+                                 </children></AnchorPane>
+                              <AnchorPane layoutX="350.0" layoutY="30.0" prefHeight="200.0" prefWidth="300.0" styleClass="anchor_home" stylesheets="@../css/dashboard.css">
+                                 <children>
+                                    <Label layoutX="70.0" layoutY="150.0" text="TỔNG THU NHẬP" textFill="WHITE">
+                                       <font>
+                                          <Font name="Montserrat Black" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="home_thunhap_txt" alignment="BASELINE_RIGHT" layoutX="30.0" layoutY="30.0" prefHeight="39.0" prefWidth="242.0" text="0" textFill="WHITE">
+                                       <font>
+                                          <Font name="Montserrat Black" size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="MONEY" layoutX="30.0" layoutY="120.0" size="5em" />
+                                 </children></AnchorPane>
+                              <AnchorPane layoutX="675.0" layoutY="30.0" prefHeight="200.0" prefWidth="300.0" styleClass="anchor_home" stylesheets="@../css/dashboard.css">
+                                 <children>
+                                    <Label layoutX="65.0" layoutY="150.0" text="SỐ LƯỢNG KHÁCH" textFill="WHITE">
+                                       <font>
+                                          <Font name="Montserrat Black" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="home_khach_txt" layoutX="250.0" layoutY="30.0" text="0" textFill="WHITE">
+                                       <font>
+                                          <Font name="Montserrat Black" size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="30.0" layoutY="120.0" size="5em" />
+                                 </children></AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="260.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <ImageView fitHeight="300.0" fitWidth="500.0" layoutX="250.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/dashboard_home.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="store_form" prefHeight="660.0" prefWidth="1000.0" style="-fx-background-color: #FFFFFF;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="660.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TextField fx:id="store_search_txt" layoutX="5.0" layoutY="10.0" prefHeight="35.0" prefWidth="400.0" promptText="Type something here..." style="-fx-border-color: #29B6F6;">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </TextField>
+                              <FontAwesomeIcon fill="#29b6f6" glyphName="SEARCH" layoutX="10.0" layoutY="35.0" size="2em" />
+                              <TableView fx:id="store_table" layoutY="55.0" onMouseClicked="#storeMedicineSelect" prefHeight="350.0" prefWidth="1000.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #29B6F6;" stylesheets="@../css/dashboard.css">
+                                <columns>
+                                  <TableColumn fx:id="store_maThuoc_col" prefWidth="84.79998779296875" text="MÃ THUỐC" />
+                                  <TableColumn fx:id="store_tenThuoc_col" prefWidth="177.60003662109375" text="TÊN THUỐC" />
+                                    <TableColumn fx:id="store_nsx_col" prefWidth="96.00003051757812" text="NSX" />
+                                    <TableColumn fx:id="store_hsd_col" prefWidth="100.0" text="HSD" />
+                                    <TableColumn fx:id="store_donGia_col" prefWidth="139.199951171875" text="ĐƠN GIÁ" />
+                                    <TableColumn fx:id="store_thuongHieu_col" minWidth="0.0" prefWidth="119.199951171875" text="THƯƠNG HIỆU" />
+                                    <TableColumn fx:id="store_loai_col" minWidth="0.0" prefWidth="148.0" text="LOẠI" />
+                                    <TableColumn fx:id="store_soLuong_col" minWidth="0.0" prefWidth="137.5999755859375" text="SỐ LƯỢNG" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="store_them_btn" layoutX="844.0" layoutY="430.0" mnemonicParsing="false" onAction="#storeMedicineAdd" prefHeight="35.0" prefWidth="100.0" styleClass="store_btn" stylesheets="@../css/dashboard.css" text="THÊM" textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="store_sua_btn" layoutX="844.0" layoutY="480.0" mnemonicParsing="false" onAction="#storeMedicineUpdate" prefHeight="35.0" prefWidth="100.0" styleClass="store_btn" stylesheets="@../css/dashboard.css" text="SỬA" textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="store_xoa_btn" layoutX="844.0" layoutY="580.0" mnemonicParsing="false" onAction="#storeMedicineDelete" prefHeight="35.0" prefWidth="100.0" styleClass="store_btn" stylesheets="@../css/dashboard.css" text="XOÁ" textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="14.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="store_maThuoc_txt" layoutX="120.0" layoutY="430.0" prefHeight="35.0" prefWidth="250.0" style="-fx-border-color: #29B6F6;">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="20.0" layoutY="440.0" text="MÃ THUỐC" textFill="#0165a3">
+                                 <font>
+                                    <Font name="Montserrat SemiBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="store_tenThuoc_txt" layoutX="120.0" layoutY="480.0" prefHeight="35.0" prefWidth="250.0" style="-fx-border-color: #29B6F6;">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="20.0" layoutY="490.0" text="TÊN THUỐC" textFill="#0165a3">
+                                 <font>
+                                    <Font name="Montserrat SemiBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="20.0" layoutY="540.0" text="NSX" textFill="#0165a3">
+                                 <font>
+                                    <Font name="Montserrat SemiBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="21.0" layoutY="590.0" text="HSD" textFill="#0165a3">
+                                 <font>
+                                    <Font name="Montserrat SemiBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="store_donGia_txt" layoutX="540.0" layoutY="430.0" prefHeight="35.0" prefWidth="250.0" style="-fx-border-color: #29B6F6;">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="420.0" layoutY="440.0" text="ĐƠN GIÁ" textFill="#0165a3">
+                                 <font>
+                                    <Font name="Montserrat SemiBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="store_thuongHieu_txt" layoutX="540.0" layoutY="480.0" prefHeight="35.0" prefWidth="250.0" style="-fx-border-color: #29B6F6;">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="420.0" layoutY="490.0" text="THƯƠNG HIỆU" textFill="#0165a3">
+                                 <font>
+                                    <Font name="Montserrat SemiBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="420.0" layoutY="540.0" text="LOẠI" textFill="#0165a3">
+                                 <font>
+                                    <Font name="Montserrat SemiBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="store_soLuong_txt" layoutX="540.0" layoutY="580.0" prefHeight="35.0" prefWidth="250.0" style="-fx-border-color: #29B6F6;">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="420.0" layoutY="590.0" text="SỐ LƯỢNG" textFill="#0165a3">
+                                 <font>
+                                    <Font name="Montserrat SemiBold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="store_nsx_txt" layoutX="120.0" layoutY="530.0" prefHeight="35.0" prefWidth="250.0" style="-fx-border-color: #29B6F6;" />
+                              <DatePicker fx:id="store_hsd_txt" layoutX="120.0" layoutY="580.0" prefHeight="35.0" prefWidth="250.0" style="-fx-border-color: #29B6F6;" />
+                              <ComboBox fx:id="store_loai_txt" layoutX="540.0" layoutY="530.0" onAction="#storeLoaiThuocList" prefHeight="35.0" prefWidth="250.0" promptText="Chọn" style="-fx-border-color: #29B6F6;" />
+                              <Button fx:id="store_btn_clear" layoutX="844.0" layoutY="530.0" mnemonicParsing="false" onAction="#storeMedicineClear" prefHeight="35.0" prefWidth="100.0" styleClass="store_btn" stylesheets="@../css/dashboard.css" text="DỌN" textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="purchase_form" prefHeight="660.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="660.0" prefWidth="600.0" style="-fx-background-color: #ffffff; -fx-border-color: #29B6F6; -fx-border-width: 5 15 0 0;">
+                           <children>
+                              <TableView fx:id="purchase_donThuoc_table" layoutX="5.0" layoutY="45.0" onMouseClicked="#purchaseSelect" prefHeight="480.0" prefWidth="575.0" style="-fx-border-color: #29B6F6;" stylesheets="@../css/dashboard.css">
+                                <columns>
+                                  <TableColumn fx:id="purchase_donThuoc_maThuoc_col" prefWidth="68.80001831054688" text="MÃ THUỐC" />
+                                  <TableColumn fx:id="purchase_donThuoc_tenThuoc_col" prefWidth="178.39996337890625" text="TÊN THUỐC" />
+                                    <TableColumn fx:id="purchase_donThuoc_donGia_col" prefWidth="111.99993896484375" text="ĐƠN GIÁ" />
+                                    <TableColumn fx:id="purchase_donThuoc_soLuong_col" prefWidth="91.2000732421875" text="SỐ LƯỢNG" />
+                                    <TableColumn fx:id="purchase_donThuoc_cachDung_col" prefWidth="126.39996337890625" text="CÁCH DÙNG" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="10.0" layoutY="10.0" text="ĐƠN THUỐC" textFill="#29b6f6">
+                                 <font>
+                                    <Font name="Montserrat ExtraBold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane layoutX="5.0" layoutY="530.0" prefHeight="126.0" prefWidth="575.0" style="-fx-border-color: #29B6F6;">
+                                 <children>
+                                    <Button fx:id="purchase_thanhToan_btn" layoutX="200.0" layoutY="75.0" mnemonicParsing="false" onAction="#purchaseThanhToan" prefHeight="40.0" prefWidth="200.0" styleClass="store_btn" stylesheets="@../css/dashboard.css" text="THANH TOÁN" textFill="WHITE">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="5.0" layoutY="10.0" text="TỔNG TIỀN:" textFill="#0165a3">
+                                       <font>
+                                          <Font name="Montserrat SemiBold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="purchase_tongTienTxt" alignment="BASELINE_RIGHT" layoutX="400.0" layoutY="10.0" prefHeight="26.0" prefWidth="164.0" text="0.0VND" textFill="#0165a3">
+                                       <font>
+                                          <Font name="Montserrat SemiBold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="5.0" layoutY="40.0" text="KHÁCH TRẢ:" textFill="#0165a3" visible="false">
+                                       <font>
+                                          <Font name="Montserrat SemiBold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="purchase_khachTraTxt" layoutX="125.0" layoutY="35.0" prefHeight="30.0" prefWidth="164.0" style="-fx-border-color: #29B6F6;" visible="false">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label layoutX="320.0" layoutY="40.0" text="TIỀN THỪA:" textFill="#0165a3" visible="false">
+                                       <font>
+                                          <Font name="Montserrat SemiBold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="purchase_tienThuaTxt" alignment="BASELINE_RIGHT" layoutX="428.0" layoutY="38.0" prefHeight="26.0" prefWidth="133.0" text="0.0VND" textFill="#0165a3" visible="false">
+                                       <font>
+                                          <Font name="Montserrat SemiBold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="600.0" prefHeight="660.0" prefWidth="400.0" style="-fx-background-color: #ffffff; -fx-border-color: #29B6F6; -fx-border-width: 5 0 0 0;">
+                           <children>
+                              <TextField fx:id="purchase_keDon_searchTxt" layoutX="5.0" layoutY="45.0" prefHeight="35.0" prefWidth="390.0" promptText="Type something here..." style="-fx-border-color: #29B6F6;">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </TextField>
+                              <TableView fx:id="purchase_keDon_table" layoutX="5.0" layoutY="80.0" prefHeight="250.0" prefWidth="390.0" style="-fx-border-color: #29B6F6;" stylesheets="@../css/dashboard.css">
+                                <columns>
+                                  <TableColumn fx:id="purchase_keDon_maThuoc_col" prefWidth="89.5999755859375" text="MÃ THUỐC" />
+                                  <TableColumn fx:id="purchase_keDon_tenThuoc_col" prefWidth="194.39996337890625" text="TÊN THUỐC" />
+                                    <TableColumn fx:id="purchase_keDon_donGia_col" prefWidth="118.4000244140625" text="ĐƠN GIÁ" />
+                                </columns>
+                              </TableView>
+                              <FontAwesomeIcon fill="#29b6f6" glyphName="SEARCH" layoutX="10.0" layoutY="70.0" size="2em" />
+                              <AnchorPane layoutX="5.0" layoutY="335.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="321.0" prefWidth="390.0" style="-fx-border-color: #29B6F6;">
+                                 <children>
+                                    <Label layoutX="10.0" layoutY="20.0" text="MÃ THUỐC" textFill="#0165a3">
+                                       <font>
+                                          <Font name="Montserrat SemiBold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="55.0" text="TÊN THUỐC" textFill="#0165a3">
+                                       <font>
+                                          <Font name="Montserrat SemiBold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="95.0" text="SỐ LƯỢNG" textFill="#0165a3">
+                                       <font>
+                                          <Font name="Montserrat SemiBold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="purchase_maThuocTxt" layoutX="120.0" layoutY="10.0" onMouseClicked="#purchaseMaThuocList" prefHeight="30.0" prefWidth="250.0" promptText="Lựa chọn mã thuốc" style="-fx-border-color: #29B6F6;" />
+                                    <ComboBox fx:id="purchase_tenThuocTxt" layoutX="120.0" layoutY="50.0" onMouseClicked="#purchaseTenThuocList" prefHeight="30.0" prefWidth="250.0" promptText="Lựa chọn tên thuốc" style="-fx-border-color: #29B6F6;" />
+                                    <Spinner fx:id="purchase_soLuongTxt" layoutX="120.0" layoutY="90.0" onMouseClicked="#purchaseSoluong" prefHeight="30.0" prefWidth="250.0" style="-fx-border-color: #29B6F6;" />
+                                    <Label layoutX="10.0" layoutY="135.0" text="CÁCH DÙNG" textFill="#0165a3">
+                                       <font>
+                                          <Font name="Montserrat SemiBold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="purchase_cachDungTxt" layoutX="120.0" layoutY="130.0" prefHeight="30.0" prefWidth="250.0" style="-fx-border-color: #29B6F6;">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button fx:id="purchase_loaiBo_btn" layoutX="90.0" layoutY="180.0" mnemonicParsing="false" onAction="#purchaseRemove" prefHeight="35.0" prefWidth="100.0" styleClass="store_btn" stylesheets="@../css/dashboard.css" text="LOẠI BỎ" textFill="WHITE">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="purchase_them_btn" layoutX="205.0" layoutY="180.0" mnemonicParsing="false" onAction="#purchaseThem" prefHeight="35.0" prefWidth="100.0" styleClass="store_btn" stylesheets="@../css/dashboard.css" text="THÊM" textFill="WHITE">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="5.0" layoutY="10.0" text="KÊ ĐƠN" textFill="#29b6f6">
+                                 <font>
+                                    <Font name="Montserrat ExtraBold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="purchase_ngay" layoutX="216.0" layoutY="8.0" prefHeight="32.0" prefWidth="178.0" style="-fx-border-color: #29B6F6;" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="statistic_form" layoutX="22.0" layoutY="14.0" prefHeight="660.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="660.0" prefWidth="1000.0" style="-fx-background-color: #ffffff; -fx-border-color: #29B6F6; -fx-border-width: 5 10 10 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TableView fx:id="thongke_ChiTiet_table" layoutX="5.0" layoutY="45.0" onMouseClicked="#purchaseSelect" prefHeight="450.0" prefWidth="575.0" style="-fx-border-color: #29B6F6;" stylesheets="@../css/dashboard.css">
+                                 <columns>
+                                    <TableColumn fx:id="thongke_chiTiet_idKhach_col" prefWidth="83.19996643066406" text="ID KHÁCH" />
+                                    <TableColumn fx:id="thongke_chiTiet_maThuoc_col" prefWidth="84.00006103515625" text="MÃ THUỐC" />
+                                    <TableColumn fx:id="thongke_chiTiet_tenThuoc_col" prefWidth="122.4000244140625" text="TÊN THUỐC" />
+                                    <TableColumn fx:id="thongke_chiTiet_donGia_col" prefWidth="70.4000244140625" text="ĐƠN GIÁ " />
+                                    <TableColumn fx:id="thongke_chiTiet_soLuong_col" prefWidth="98.39996337890625" text="SỐ LƯỢNG" />
+                                    <TableColumn fx:id="thongke_chiTiet_ngayMua_col" prefWidth="112.00004882812505" text="NGÀY MUA" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="10.0" layoutY="10.0" text="THỐNG KÊ" textFill="#29b6f6">
+                                 <font>
+                                    <Font name="Montserrat ExtraBold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane layoutX="5.0" layoutY="500.0" prefHeight="145.0" prefWidth="980.0" style="-fx-border-color: #29B6F6;">
+                                 <children>
+                                    <Label layoutX="5.0" layoutY="5.0" text="Thống kê theo ngày từ" textFill="#29b6f6">
+                                       <font>
+                                          <Font name="Montserrat ExtraBold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="thongke_ngayBatDau_txt" layoutX="310.0" layoutY="5.0" style="-fx-border-color: #29B6F6;" />
+                                    <Label layoutX="500.0" layoutY="5.0" text="đến" textFill="#29b6f6">
+                                       <font>
+                                          <Font name="Montserrat ExtraBold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="thongke_ngayKetThuc_txt" layoutX="560.0" layoutY="5.0" style="-fx-border-color: #29B6F6;" />
+                                    <Label layoutX="5.0" layoutY="35.0" text="Số lượng thuốc đã bán:" textFill="#29b6f6">
+                                       <font>
+                                          <Font name="Montserrat ExtraBold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="5.0" layoutY="65.0" text="Doanh thu:" textFill="#29b6f6">
+                                       <font>
+                                          <Font name="Montserrat ExtraBold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="thongke_soLuong" layoutX="305.0" layoutY="35.0" prefHeight="30.0" prefWidth="274.0" text="0" textFill="#29b6f6">
+                                       <font>
+                                          <Font name="Montserrat ExtraBold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="thongke_doanhthu" layoutX="160.0" layoutY="65.0" prefHeight="30.0" prefWidth="274.0" text="0" textFill="#29b6f6">
+                                       <font>
+                                          <Font name="Montserrat ExtraBold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="thongke_Go" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="745.0" layoutY="5.0" mnemonicParsing="false" onAction="#hienThiTongSoLuongThuocDaBan" prefHeight="27.2" prefWidth="106.0" styleClass="dashboard_btn_left" stylesheets="@../css/dashboard.css" text="GO" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Montserrat SemiBold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <TableView fx:id="thongke_donHang_table" layoutX="585.0" layoutY="45.0" onMouseClicked="#purchaseSelect" prefHeight="450.0" prefWidth="400.0" style="-fx-border-color: #29B6F6;" stylesheets="@../css/dashboard.css">
+                                 <columns>
+                                    <TableColumn fx:id="thongke_donHang_idDonThuoc_col" text="ID ĐƠN THUỐC" />
+                                    <TableColumn fx:id="thongke_donHang_idKhach_col" prefWidth="71.20001220703125" text="ID KHÁCH" />
+                                    <TableColumn fx:id="thongke_donHang_tongTien_col" prefWidth="106.40008544921875" text="TỔNG TIỀN" />
+                                    <TableColumn fx:id="thongke_donHang_ngayMua_col" prefWidth="142.39990234375" text="NGÀY THANH TOÁN" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="about_form" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="660.0" prefWidth="1000.0" style="-fx-background-color: #29B6F6;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="54.0" layoutY="41.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="660.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="25.0" layoutY="30.0" prefHeight="600.0" prefWidth="950.0" style="-fx-border-color: #29B6F6; -fx-border-width: 0; -fx-background-radius: 100; -fx-border-radius: 100; -fx-background-color: white;">
+                                 <children>
+                                    <AnchorPane layoutX="166.0" layoutY="153.0" prefHeight="200.0" prefWidth="651.0">
+                                       <children>
+                                          <ImageView fitHeight="239.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/nkd.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="200.0" fitWidth="215.0" layoutX="450.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/nhp.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="250.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/dth.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <HBox layoutX="187.0" layoutY="379.0" spacing="20.0">
+                                       <children>
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label text="NGUYỄN KHOA ĐOÀN" textFill="#29b6f6">
+                                                   <font>
+                                                      <Font name="Montserrat ExtraBold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="20207642" textFill="#29b6f6">
+                                                   <font>
+                                                      <Font name="Montserrat ExtraBold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="IT-LTU 01-K65" textFill="#29b6f6">
+                                                   <font>
+                                                      <Font name="Montserrat ExtraBold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <Line endX="-100.0" endY="20.0" startX="-100.0" startY="-54.999969482421875" stroke="#29b6f6" strokeWidth="5.0" />
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label text="ĐỖ TRUNG HIẾU" textFill="#29b6f6">
+                                                   <font>
+                                                      <Font name="Montserrat ExtraBold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="20207604" textFill="#29b6f6">
+                                                   <font>
+                                                      <Font name="Montserrat ExtraBold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="IT-LTU 01-K65" textFill="#29b6f6">
+                                                   <font>
+                                                      <Font name="Montserrat ExtraBold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <Line endX="-100.0" endY="20.0" startX="-100.0" startY="-54.999969482421875" stroke="#29b6f6" strokeWidth="5.0" />
+                                          <VBox alignment="CENTER">
+                                             <children>
+                                                <Label text="NGUYỄN HẢI PHONG" textFill="#29b6f6">
+                                                   <font>
+                                                      <Font name="Montserrat ExtraBold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="20207624" textFill="#29b6f6">
+                                                   <font>
+                                                      <Font name="Montserrat ExtraBold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="IT-LTU 01-K65" textFill="#29b6f6">
+                                                   <font>
+                                                      <Font name="Montserrat ExtraBold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <Label layoutX="350.0" layoutY="70.0" text="ABOUT US" textFill="#29b6f6">
+                                       <font>
+                                          <Font name="Montserrat ExtraBold" size="48.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
